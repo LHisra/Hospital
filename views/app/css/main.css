@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Dancing+Script:700);
+@import url(http://localhost/Hospital/views/fonts/DancingScript.otf);
 
 body{
   font-family: 'Lato', sans-serif;
@@ -7,7 +7,7 @@ img{
   max-width: 100% ;
 }
 header{
-  color: #f5fefd;
+  color: #ffffff;
   position:relative;
   min-height:auto;
   text-align:center;
@@ -67,14 +67,16 @@ header{
 }
 header .header-content{
   position:absolute;
-  top:35%;
+  top:50%;
   padding:0 50px;
   -webkit-transform:translateY(-50%);
   -ms-transform:translateY(-50%);
   transform:translateY(-50%)
+  border : red 1px solid;
 }
 
 header .header-content .inner{
+
   margin-right:auto;
   margin-left:auto;
   max-width:1000px
