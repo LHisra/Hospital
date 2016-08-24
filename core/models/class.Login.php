@@ -26,7 +26,7 @@
   					$fila = $query->fetch();
   					$_SESSION['app_id'] = $fila['id'];
             // ini_set le da el tiempo de vida al usuario para estar logeado (60*60*24 = 24 horas)
-            if($_POST['sesion']) { ini_set('session.cookie_lifetime', time() + (60*60*24)); }
+            if($_SESSION['sesion']) { ini_set('session.cookie_lifetime', time() + (60*60*24)); }
   				 	return TRUE;
   				}else{
   					return FALSE;

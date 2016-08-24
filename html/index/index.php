@@ -10,7 +10,7 @@
 					<!-- inner -->
 					<div class="inner">
 						<!-- col -->
-	          <div class="col-xs-12 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-7 " >
+	          <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-7 " >
 							<!-- header-form -->
 							<div class="header-form">
 	              <h1 class="cursive">Inventario Materiales Quirúrgicos</h1>
@@ -36,9 +36,6 @@
 				<!-- row -->
 				<div class="row">
 					<div  class="col-xs-12 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-7 " id="_AJAX_LOGIN_">
-						<?php
-								echo $users[$_SESSION['app_id']]['nombre'];
-						?>
 					</div>
 				</div> <!-- fin drow -->
 			</div> <!-- fin header-content -->

@@ -1,0 +1,31 @@
+.cursive{
+  font-family:'Dancing Script',cursive;
+  text-transform:none
+}
+
+.retraso-1{
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.retraso-2{
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.editarModal .modal {
+  position: relative;
+  top: auto;
+  bottom: auto;
+  right: auto;
+  left: auto;
+  display: block;
+  z-index: 1;
+}
+.editarModal .modal {
+  background: transparent !important;
+}
+.datepicker{
+  z-index: 100000 !important;;
+}
