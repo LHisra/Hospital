@@ -26,7 +26,7 @@ function goLogin(){
         /* llamamos a la function que esta en generales.php __() y le ponemos el id = '_AJAX_LOGIN_'
            para mostrar el mensaje en HTML */
         __('_AJAX_LOGIN_').innerHTML = result;
-        location.reload();
+        window.location="?view=home";
       }else{
         //muestra un error en php, si hay problemas en la sintaxis
         __('_AJAX_LOGIN_').innerHTML = connect.responseText;

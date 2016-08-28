@@ -110,7 +110,7 @@
                 </div>
                 <!-- /.tab-pane -->
                 <div class="tab-pane" id="settings">
-                  <form class="form-horizontal">
+                  <div  role="form" class="form-horizontal" onkeypress="return runScriptReg(event)">
                     <div class="form-group">
                       <label for="inputName" class="col-sm-2 control-label">Name</label>
 
@@ -157,11 +157,12 @@
                     </div>
                     <div class="form-group">
                       <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-danger">Submit</button>
+                        <button type="submit" onclick="goReg()" class="btn btn-danger">Submit</button>
                       </div>
                     </div>
-                  </form>
+                  </div>
                 </div>
+								<script type="text/javascript" src="views/app/js/reg.js"></script>
                 <!-- /.tab-pane -->
               </div>
               <!-- /.tab-content -->

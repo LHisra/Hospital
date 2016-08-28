@@ -6,6 +6,7 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <script type="text/javascript" src="views/app/js/generales.js"></script>
     <?php
       if(isset($_SESSION['app_id'])){
         require (HTML_DIR.'overall/headAdmin.html');

@@ -27,7 +27,7 @@
 									<div class="form-group">
 											<input type="checkbox" id="session_login"> Recuerdame
 									</div>
-	                <button class="btn btn-primary btn-xl page-scroll" onclick="goLogin()">Entrar</button>
+	                <a href="" class="btn btn-primary btn-xl page-scroll" onclick="goLogin()">Entrar</a >
 								</div> <!-- fin form -->
 							</div> <!-- fin header-form -->
 						</div> <!-- fin col -->

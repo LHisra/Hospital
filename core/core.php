@@ -16,9 +16,8 @@
   require('core/bin/functions/Encrypt.php');
   require('core/bin/functions/Users.php');
   //Clases
-  require_once('core/models/class.Conexion.php');
+  require('core/models/class.Conexion.php');
   require('core/models/class.Users.php');
-  require('core/models/class.Login.php');
   //Variable global
   $users = Users();
 ?>
