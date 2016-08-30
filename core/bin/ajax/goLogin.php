@@ -4,15 +4,15 @@
     /* Accedemos al método singleton que es quién crea la instancia
     de nuestra clase y así podemos acceder sin necesidad de
     crear nuevas instancias, lo que ahorra consumo de recursos */
-    $nuevoSingleton = Users::singleton_Users();
+    $nuevoSingleton = Users::Singleton();
     $data = $_POST['user'];
     $pass = Encrypt($_POST['pass']);
     $session = $_POST['session'];
     // accedemos al método usuarios y los mostramos
-    $usuario = $nuevoSingleton->login_Users($data,$pass,$session);
+    $usuario = $nuevoSingleton->login($data,$pass,$session);
     // si el usuario existe
     if($usuario == TRUE) {
-      /* cuando se hace el echo sea  igual 1 es para que el ajax se cierre y termine 
+      /* cuando se hace el echo sea  igual 1 es para que el ajax se cierre y termine
          if(connect.responseText == 1)
       */
       echo 1;

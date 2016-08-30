@@ -22,17 +22,17 @@
             <div class="box box-primary">
               <div class="box-body box-profile">
                 <img class="profile-user-img img-responsive img-circle" src="views/app/img/user.jpeg" alt="User profile picture">
-                <h3 class="profile-username text-center"><?php echo $users[$_SESSION['app_id']]['nombre'] ." ". $users[$_SESSION['app_id']]['apellido']; ?></h3>
+                <h3 class="profile-username text-center"><?php echo $_users[$_SESSION['app_id']]['nombre'] ." ". $_users[$_SESSION['app_id']]['apellido']; ?></h3>
                 <p class="text-muted text-center">Datos del Usuario</p>
                 <ul class="list-group list-group-unbordered">
                   <li class="list-group-item">
-                    <a>Cédula de Identidad</a> <b class="pull-right"><?php echo $users[$_SESSION['app_id']]['cedula']; ?></b>
+                    <a>Cédula de Identidad</a> <b class="pull-right"><?php echo $_users[$_SESSION['app_id']]['cedula']; ?></b>
                   </li>
                   <li class="list-group-item">
-                    <a>Nombre</a> <b class="pull-right"><?php echo $users[$_SESSION['app_id']]['nombre']; ?></b>
+                    <a>Nombre</a> <b class="pull-right"><?php echo $_users[$_SESSION['app_id']]['nombre']; ?></b>
                   </li>
                   <li class="list-group-item">
-                    <a>Apellido</a> <b class="pull-right"><?php echo $users[$_SESSION['app_id']]['apellido']; ?></b>
+                    <a>Apellido</a> <b class="pull-right"><?php echo $_users[$_SESSION['app_id']]['apellido']; ?></b>
                   </li>
                   <li class="list-group-item">
                     <a>F. Nacimiento</a> <b class="pull-right">30/04/1996</b>
@@ -127,21 +127,18 @@
                     </div>
                     <div class="form-group">
                       <label for="inputName" class="col-sm-2 control-label">Name</label>
-
                       <div class="col-sm-10">
                         <input type="text" class="form-control" id="inputName" placeholder="Name">
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="inputExperience" class="col-sm-2 control-label">Experience</label>
-
                       <div class="col-sm-10">
                         <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
-
                       <div class="col-sm-10">
                         <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
                       </div>
@@ -172,15 +169,13 @@
           <!-- /.col -->
         </div>
         <!-- /.row -->
-
       </section>
       <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
   </div>
   <?php
-	include (HTML_DIR.'overall/footer.php');
-
+		include (HTML_DIR.'overall/footer.html');
   ?>
   <!-- ./wrapper -->
   </body>

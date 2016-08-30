@@ -1,7 +1,6 @@
 
 <?php
   class Conexion{
-
     private static $instancia;
     private $dbh;
     /* Creamos la conexión, siendo este mismo privado que es como lo debemos
@@ -15,11 +14,18 @@
           die();
       }
     }
-    //Método prepare, para que la conexión funcione (hay que hacer esto siempre).
+    //funcion prepare, para que la conexión funcione (hay que hacer esto siempre).
     public function prepare($sql){
       return $this->dbh->prepare($sql);
     }
-    public static function singleton_Conexion(){
+    public static function Singleton(){
+      if (!isset(self::$instancia)) {
+          $miclase = __CLASS__;
+          self::$instancia = new $miclase;
+      }
+      return self::$instancia;
+    }
+    public static function Singletonn(){
       if (!isset(self::$instancia)) {
           $miclase = __CLASS__;
           self::$instancia = new $miclase;
@@ -27,8 +33,8 @@
       return self::$instancia;
     }
      // Evita que el objeto se pueda clonar
-    public function __clone(){
-      trigger_error('La clonación de este objeto no está permitida', E_USER_ERROR);
-    }
+    // public function __clone(){
+    //   trigger_error('La clonación de este objeto no está permitida', E_USER_ERROR);
+    // }
   }
 ?>

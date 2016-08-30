@@ -3,29 +3,26 @@
   	private static $instancia;
   	private $dbh;
   	private function __construct(){
-     	$this->dbh = Conexion::singleton_Conexion();
+     	$this->dbh = Conexion::Singleton();
   	}
-  	public static function singleton_Users(){
+  	public static function Singleton(){
     	if (!isset(self::$instancia)) {
       	$miclase = __CLASS__;
       	self::$instancia = new $miclase;
     	}
     	return self::$instancia;
   	}
-    public function get_Users(){
+    public function get(){
   	  try {
-
         $sql = "SELECT * FROM user";
         $query = $this->dbh->prepare($sql);
         $results = $query->execute();
         return $query->fetchAll();
-        $this->dbh = null;
-
       }catch(PDOException $e){
   			print "Error!: " . $e->getMessage();
   		}
   	}
-    public function login_Users($data,$pass,$session){
+    public function login($data,$pass,$session){
       try {
   				$sql = "SELECT id FROM user WHERE (usuario = '$data' OR cedula = '$data') AND pass = '$pass'";
   				$query = $this->dbh->prepare($sql);
@@ -48,9 +45,11 @@
   			print "Error!: " . $e->getMessage();
   		}
   	}
-
   	public function __clone(){
       trigger_error('La clonación de este objeto no está permitida', E_USER_ERROR);
+    }
+    public function __destruct(){
+      $this->dbh = null;
     }
   }
 ?>

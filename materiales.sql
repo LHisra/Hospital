@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-08-2016 a las 04:46:50
+-- Tiempo de generación: 30-08-2016 a las 05:57:15
 -- Versión del servidor: 5.7.11
--- Versión de PHP: 5.6.19
+-- Versión de PHP: 7.0.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,31 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `materiales`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `permanentes`
+--
+
+CREATE TABLE `permanentes` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `cantidad` int(11) NOT NULL,
+  `disponible_s` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `permanentes`
+--
+
+INSERT INTO `permanentes` (`id`, `nombre`, `cantidad`, `disponible_s`) VALUES
+(1, 'inyectadoras 40cc', 5, 5),
+(2, 'batas', 5, 5),
+(3, 'ds', 22, 22),
+(4, 'qq', 3, 3),
+(5, 'sss', 2, 2),
+(6, 'qqqq', 333, 333);
 
 -- --------------------------------------------------------
 
@@ -49,6 +74,12 @@ INSERT INTO `user` (`id`, `cedula`, `nombre`, `apellido`, `usuario`, `pass`, `ti
 --
 
 --
+-- Indices de la tabla `permanentes`
+--
+ALTER TABLE `permanentes`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `user`
 --
 ALTER TABLE `user`
@@ -58,6 +89,11 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
+--
+-- AUTO_INCREMENT de la tabla `permanentes`
+--
+ALTER TABLE `permanentes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `user`
 --

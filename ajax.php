@@ -4,15 +4,16 @@
     switch (isset($_GET['mode'])? $_GET['mode'] : null) {
       case 'login':
         require('core/bin/ajax/goLogin.php');
-        break;
+      break;
       case 'reg':
         require('core/bin/ajax/goReg.php');
-        break;
-        
-
+      break;
+      case 'permanentes':
+        require('core/controllers/permanentesController.php');
+      break;
       default:
         header('location: index.php');
-        break;
+      break;
     }
   }else {
     header('location: index.php');
